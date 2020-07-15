@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vote for cat</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5a7b06498c.js" crossorigin="anonymous"></script>
+    
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+          <h1><i class="fas fa-cat"></i> The cat page</h1>
+      </a>
+      <span class="navbar-text">
+        Welcome to the ugly cat page
+      </span>
+    </nav>  
+
+    <div class="container-fluid">
+      <button id="show-a-cat" class="btn btn-info">Click here to see another ugly cat</button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 container-fluid">
+          <div class="card">
+            <div id="gato"></div>
+            <!-- <img id="cat-image" class="card-img-top" src="${res.data[0]["url"]}"> -->
+
+
+            <div class="card-body">
+            <h5 class="card-title text-center">Isn't it ugly?</h5>
+              <div class="buttons text-center">
+                <button id="ugly" class="btn btn-info">Vote as UGLY</button>
+                <button id="uglier" class="btn btn-danger">Vote as UGLIER</button>
+              </div>
+            </div>
+              
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+      
+    </div>
+
+    <div class="container">
+      <button id="check-votes" class="btn btn-success">Check the votes</button>
+    </div>
+
+    <div id="votos"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
