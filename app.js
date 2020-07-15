@@ -20,7 +20,7 @@ function showCat(res){
 function votedUgly() {
   axios
     .post('https://api.thecatapi.com/v1/votes', {
-      "image_id": "${data[0]["id"]}" //I don't know how to call the data of the image called in the get function... how do I call it back?
+      //"image_id": "${data[0]["id"]}" //I don't know how to call the data of the image called in the get function... how do I call it back?
       "sub_id": "my-user-1234", //sub-id I guess can be set arbitrary, or not at all?? since there is no user system set up for this demo?
       "value": 1 //this would make the vote go to the pile of 1's, the value in the other button when set to 0, would make the vote go to the pile of 0's I guess?
     },
@@ -39,6 +39,17 @@ function votedUglier() {
 
 function getVotes(){
   console.log("getting the votes....")
+axios
+    .get('https://api.thecatapi.com/v1/votes', {"headers": {'x-api-key': '6c8d8157-9c52-4111-8e6e-8d866cf41af5'}})
+    .then(res => showVotes(res))
+    .catch(err => console.log(error));
+
+}
+
+function showVotes(res){
+  document.getElementById('votos').innerHTML = `
+  <p>${JSON.stringify(res.data)}</p>
+  `;
 }
 
 
